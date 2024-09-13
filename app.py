@@ -3,7 +3,7 @@ from cryptography.fernet import Fernet
 import os
 
 app = Flask(__name__)
-app.secret_key = 'supersecretkey'  # Flash mesajları için gerekli
+app.secret_key = 'supersecretkey'  
 
 @app.route('/')
 def index():
@@ -19,12 +19,10 @@ def add():
         flash('All fields are required!', 'error')
         return redirect(url_for('index'))
     
-    # Şifreleme anahtarını oluşturma
     key = Fernet.generate_key()
     cipher_suite = Fernet(key)
     encrypted_password = cipher_suite.encrypt(password.encode())
     
-    # ID oluşturma
     if os.path.exists('passwords.txt'):
         with open('passwords.txt', 'r') as f:
             lines = f.readlines()
@@ -36,7 +34,6 @@ def add():
     else:
         new_id = 1
     
-    # Anahtarı ve şifrelenmiş parolayı kaydetme
     with open('passwords.txt', 'a') as f:
         f.write(f"{new_id},{site_name},{username},{encrypted_password.decode()},{key.decode()}\n")
     
@@ -66,12 +63,10 @@ def edit(id):
             flash('All fields are required!', 'error')
             return redirect(url_for('edit', id=id))
         
-        # Şifreleme anahtarını oluşturma
         key = Fernet.generate_key()
         cipher_suite = Fernet(key)
         encrypted_password = cipher_suite.encrypt(password.encode())
         
-        # Kayıtları güncelleme
         with open('passwords.txt', 'r') as f:
             lines = f.readlines()
         
