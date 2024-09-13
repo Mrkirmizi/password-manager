@@ -41,9 +41,9 @@ This is a simple password manager web application built with Flask and Python. I
     -   ├── app.py 
     -   ├── passwords.txt 
     -   ├── templates/ │ 
-    -      ├── index.html  
-    -      ├── view.html  
-    -      └── edit.html 
+    -    ├── index.html  
+    -    ├── view.html  
+    -    └── edit.html 
     -   ├── static/ 
     -   │ └── style.css
 
