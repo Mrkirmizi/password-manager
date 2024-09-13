@@ -34,19 +34,10 @@ This is a simple password manager web application built with Flask and Python. I
 2. Open your web browser and go to `http://127.0.0.1:5000/`.
 
 3. Use the web interface to add, view, edit, and delete passwords.
-
 ## File Structure
 
--   password_manager/ │ 
-    -   ├── app.py 
-    -   ├── passwords.txt 
-    -   ├── templates/ │ 
-    -    ├── index.html  
-    -    ├── view.html  
-    -    └── edit.html 
-    -   ├── static/ 
-    -   │ └── style.css
 
+password_manager/ │ ├── app.py ├── passwords.txt ├── requirements.txt ├── templates/ │ ├── index.html │ ├── view.html │ └── edit.html ├── static/ │ └── style.css
 
 ## Dependencies
 
@@ -59,3 +50,4 @@ Feel free to fork this repository and submit pull requests. For major changes, p
 
 ## License
 
+This project is licensed under the MIT License
