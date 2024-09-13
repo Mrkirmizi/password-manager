@@ -38,14 +38,14 @@ This is a simple password manager web application built with Flask and Python. I
 
 
 password_manager/  
-├── app.py 
-├── passwords.txt  
-├── templates/ │ 
-    │ └── edit.html 
-    ├── index.html │ 
-    ├── view.html 
-├── static/ 
-│ └── style.css
+- ├── app.py 
+- ├── passwords.txt  
+- ├── templates/ │ 
+-    │ └── edit.html 
+-   ├── index.html │ 
+-   ├── view.html 
+- ├── static/ 
+- │ └── style.css
 
 ## Dependencies
 
